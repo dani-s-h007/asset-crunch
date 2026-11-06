@@ -1,0 +1,46 @@
+{
+  "name": "asset-crunch",
+  "version": "1.0.0",
+  "description": "Zero-dependency SVG optimizer & media asset size budget guard for web performance.",
+  "type": "module",
+  "main": "src/svg-optimizer.js",
+  "types": "index.d.ts",
+  "bin": {
+    "asset-crunch": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "demo",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node demo/run-demo.js",
+    "start": "node bin/cli.js"
+  },
+  "keywords": [
+    "svg",
+    "svg-optimizer",
+    "image-optimization",
+    "budget-guard",
+    "web-performance",
+    "ci",
+    "cli"
+  ],
+  "author": "dani-s-h007 <shanusathar@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dani-s-h007/asset-crunch.git"
+  },
+  "homepage": "https://github.com/dani-s-h007/asset-crunch#readme",
+  "bugs": {
+    "url": "https://github.com/dani-s-h007/asset-crunch/issues"
+  }
+}
