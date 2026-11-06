@@ -1,4 +1,4 @@
-# asset-crunch 🎨
+# asset-crunch
 
 [![CI](https://github.com/dani-s-h007/asset-crunch/actions/workflows/ci.yml/badge.svg)](https://github.com/dani-s-h007/asset-crunch/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,7 @@ Uncompressed images and bloated SVGs committed to git repositories degrade websi
 
 ---
 
-## ✨ Features
+## Features
 
 - **Zero-Dependency SVG Optimization**: Strips XML prologs, doctypes, comments, Inkscape/Illustrator metadata, and rounds excessive coordinate decimals for 40-70% size reduction.
 - **Media Size Budget Guard**: Recursively audits repository assets (`.png`, `.jpg`, `.svg`, `.webp`, `.mp4`) against team budgets (`--max-kb 200`).
@@ -20,7 +20,7 @@ Uncompressed images and bloated SVGs committed to git repositories degrade websi
 
 ---
 
-## 🚀 Installation & Demo
+## Installation & Demo
 
 ```bash
 # Run on-demand with npx
@@ -32,7 +32,7 @@ npm run demo
 
 ---
 
-## 🛠️ CLI Usage
+## CLI Usage
 
 ```bash
 # Check media size budgets across current repository:
@@ -50,7 +50,7 @@ asset-crunch --json
 
 ---
 
-## 💻 Programmatic TypeScript API
+## Programmatic TypeScript API
 
 ```typescript
 import { optimizeSvg, auditMediaBudgets } from 'asset-crunch';
@@ -61,7 +61,7 @@ console.log(`Saved ${result.savingsPct}% (${result.savedBytes} bytes)`);
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 npm test
@@ -69,7 +69,7 @@ npm test
 
 ---
 
-## 📄 License
+## License
 
 MIT © Essentials Toolkit Authors
 

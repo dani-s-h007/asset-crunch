@@ -5,7 +5,7 @@
 
 import { optimizeSvg } from '../src/svg-optimizer.js';
 
-console.log('\n🚀 Starting asset-crunch Interactive Demo...\n');
+console.log('\n=== [DEMO] Starting asset-crunch ===\n');
 
 // Sample unoptimized SVG exported from an editor with bloated metadata and excessive precision
 const bloatedSvg = `
@@ -37,5 +37,5 @@ console.log('Optimized SVG Output:');
 console.log('------------------------------------------------------------');
 console.log(result.content);
 console.log('------------------------------------------------------------');
-console.log('🎉 Demo completed successfully!\n');
+console.log('[SUCCESS] Demo completed successfully.\n');
 

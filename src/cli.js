@@ -47,7 +47,7 @@ export async function runCli(argv = process.argv.slice(2)) {
 
     if (values.output) {
       writeFileSync(resolve(values.output), result.content, 'utf8');
-      console.log(`✓ Saved optimized SVG to ${values.output} (${result.savingsPct}% reduction: ${result.originalSize}B -> ${result.optimizedSize}B)`);
+      console.log(`[OK] Saved optimized SVG to ${values.output} (${result.savingsPct}% reduction: ${result.originalSize}B -> ${result.optimizedSize}B)`);
     } else {
       process.stdout.write(result.content);
     }
@@ -65,7 +65,7 @@ export async function runCli(argv = process.argv.slice(2)) {
     return 0;
   }
 
-  console.log('\n🎨 asset-crunch - Media Asset Size Budget Guard');
+  console.log('\nasset-crunch - Media Asset Size Budget Guard');
   console.log('============================================================');
   console.log(`Audited Directory:  ${rootDir}`);
   console.log(`Scanned Media:      ${report.totalMediaFiles} files (${report.totalSizeMb} MB)`);
@@ -73,14 +73,14 @@ export async function runCli(argv = process.argv.slice(2)) {
   console.log(`Budget Violations:  ${report.hasViolations ? `\x1b[31m${report.oversized.length}\x1b[0m` : '\x1b[32m0 (All within budget)\x1b[0m'}\n`);
 
   if (!report.hasViolations) {
-    console.log('✅ All images, SVGs, and media files are within size budget!');
+    console.log('[OK] All images, SVGs, and media files are within size budget!');
     console.log('============================================================\n');
     return 0;
   }
 
   for (const item of report.oversized) {
-    console.log(`❌ ${item.file}: \x1b[1m${item.sizeKb} KB\x1b[0m (budget: ${item.limitKb} KB)`);
-    console.log(`   👉 Recommendation: ${item.recommendation}\n`);
+    console.log(`[FAIL] ${item.file}: \x1b[1m${item.sizeKb} KB\x1b[0m (budget: ${item.limitKb} KB)`);
+    console.log(`   -> Recommendation: ${item.recommendation}\n`);
   }
 
   console.log('============================================================\n');
